@@ -19,7 +19,7 @@ module.exports = (function() {
       defTimeout    = 10000,
       findUrl       = 'http://weather.service.msn.com/find.aspx';
 
-  var find = function find(options, callback) {
+  var searchByCountryName = function searchByCountryName(options, callback) {
 
     if(typeof callback !== 'function')
       callback = function callback(err, result) { return err || result; };
@@ -119,6 +119,6 @@ module.exports = (function() {
   };
 
   return {
-    find: find
+    searchData: searchByCountryName
   };
 })();
